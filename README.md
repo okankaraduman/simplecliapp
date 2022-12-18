@@ -5,7 +5,7 @@
 - [Adding to Terminal](#adding-to-terminal)
 
 ## Introduction
-This program creates a command line application with the help of go.
+This projects aims to create a CLI in GO.
 It can run parallel with the help of [goroutine](https://pkg.go.dev/github.com/dc0d/goroutines). 
 
 - For installation and running check out [build&run](#build-and-run)
@@ -20,7 +20,7 @@ go build
 ```
 or 
 ```shell script
-make run-sync
+make run-default
 ```
 
 ## Flags
@@ -30,7 +30,7 @@ make run-sync
 ```
 or 
 ```shell script
-make run-parallel
+make parallel-flag
 ``` 
 to run with 10 parallelism
 
