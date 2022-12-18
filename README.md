@@ -5,7 +5,8 @@
 - [Adding to Terminal](#adding-to-terminal)
 
 ## Introduction
-This projects aims to create a CLI in GO.
+This projects aims to create a CLI in GO. 
+CLI app sends requests to websites specified on command line and returns its hashed response(MD5)
 It can run parallel with the help of [goroutine](https://pkg.go.dev/github.com/dc0d/goroutines). 
 
 - For installation and running check out [build&run](#build-and-run)
