@@ -26,8 +26,8 @@ func main() {
 			continue
 		}
 		//Checking valid url
-		re, _ := regexp.Compile(`(https?:\/\/(www\.))?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&=]*)`)
-		if re.MatchString(arg) {
+
+		if isArgWebsite(arg) {
 			if num_of_website >= *num_of_parallel {
 				wg.Add(1)
 			}
@@ -41,6 +41,12 @@ func main() {
 	}
 
 	wg.Wait()
+
+}
+
+func isArgWebsite(str string) bool {
+	re, _ := regexp.Compile(`((https|http)?:\/\/|(www\.)?)[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&=]*)`)
+	if len(re.FindString(str)) == len(str){return true}else{return false}
 
 }
 
